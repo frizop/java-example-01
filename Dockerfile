@@ -17,7 +17,8 @@
 FROM openjdk:8-jre-slim
 
 RUN mkdir /app
+RUN mvn package
 COPY libs /app/libs
 COPY target/java-example-01.jar /app
 
-CMD ["java", "-jar", "/app/${project.artifactId}.jar"]
+CMD ["java", "-jar", "/app/java-example-01.jar"]
