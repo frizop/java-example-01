@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM openjdk:8-jre-slim
+FROM maven:3.6-jdk-8
 
 RUN mkdir /app
 RUN mvn package
